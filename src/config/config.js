@@ -7,6 +7,9 @@ module.exports = {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
         dialect: process.env.DB_DIALECT,
+        define: {
+            freezeTableName: false,
+        },
         dialectOptions:
             process.env.DB_SSL === "true"
                 ? {
