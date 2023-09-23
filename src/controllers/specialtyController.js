@@ -7,7 +7,7 @@ let getAllSpecialty = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -19,7 +19,7 @@ let createSpecialty = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -31,7 +31,7 @@ let updateSpecialty = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -43,7 +43,7 @@ let deleteSpecialty = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -58,7 +58,7 @@ let getDetailSpecialtyById = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };

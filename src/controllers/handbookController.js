@@ -7,7 +7,7 @@ let getAllHandBook = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -19,7 +19,7 @@ let createNewHandBook = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -31,7 +31,7 @@ let editHandBook = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -43,7 +43,7 @@ let deleteHandBook = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -55,7 +55,7 @@ let getDetailHandbookById = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };

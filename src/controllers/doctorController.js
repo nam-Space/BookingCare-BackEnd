@@ -8,7 +8,7 @@ let getTopDoctorHome = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -20,7 +20,7 @@ let getAllDoctors = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -32,7 +32,7 @@ let postInfoDoctor = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -44,7 +44,7 @@ let getDetailDoctorById = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -56,7 +56,7 @@ let bulkCreateSchedule = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -71,7 +71,7 @@ let getScheduleByDate = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -85,7 +85,7 @@ let getExtraInfoDoctorById = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -97,7 +97,7 @@ let getProfileDoctorById = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -112,7 +112,7 @@ let getListPatientForDoctor = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
@@ -124,7 +124,7 @@ let sendRemedy = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server",
+            errMessage: "Error from server" + error,
         });
     }
 };
