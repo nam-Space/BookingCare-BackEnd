@@ -3,6 +3,9 @@ import homeController from "../controllers/homeController";
 import userController from "../controllers/userController";
 import doctorController from "../controllers/doctorController";
 import patientController from "../controllers/patientController";
+import specialtyController from "../controllers/specialtyController";
+import clinicController from "../controllers/clinicController";
+import handbookController from "../controllers/handbookController";
 
 let router = express.Router();
 
@@ -53,6 +56,62 @@ let initWebRoutes = (app) => {
     router.post(
         "/api/patient-book-appointment",
         patientController.postBookAppointment
+    );
+
+    router.post(
+        "/api/verify-book-appointment",
+        patientController.postVerifyBookAppointment
+    );
+
+    // Specialty
+    router.get("/api/get-all-specialty", specialtyController.getAllSpecialty);
+
+    router.post(
+        "/api/create-new-specialty",
+        specialtyController.createSpecialty
+    );
+
+    router.put("/api/update-specialty", specialtyController.updateSpecialty);
+
+    router.delete("/api/delete-specialty", specialtyController.deleteSpecialty);
+
+    router.get(
+        "/api/get-detail-specialty-by-id",
+        specialtyController.getDetailSpecialtyById
+    );
+
+    // Clinic
+    router.get("/api/get-all-clinic", clinicController.getAllClinic);
+
+    router.post("/api/create-new-clinic", clinicController.createClinic);
+
+    router.put("/api/update-clinic", clinicController.updateClinic);
+
+    router.delete("/api/delete-clinic", clinicController.deleteClinic);
+
+    router.get(
+        "/api/get-detail-clinic-by-id",
+        clinicController.getDetailClinicById
+    );
+
+    router.get(
+        "/api/get-list-patient-for-doctor",
+        doctorController.getListPatientForDoctor
+    );
+
+    router.post("/api/send-remedy", doctorController.sendRemedy);
+
+    router.get("/api/get-all-handbook", handbookController.getAllHandBook);
+    router.post(
+        "/api/create-new-handbook",
+        handbookController.createNewHandBook
+    );
+    router.put("/api/edit-handbook", handbookController.editHandBook);
+    router.delete("/api/delete-handbook", handbookController.deleteHandBook);
+
+    router.get(
+        "/api/get-detail-handbook-by-id",
+        handbookController.getDetailHandbookById
     );
 
     return app.use("/", router);
