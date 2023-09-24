@@ -1,6 +1,7 @@
 import db from "../models";
 import _ from "lodash";
 import emailService from "./emailService";
+import user from "../models/user";
 require("dotenv").config();
 
 const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE;
@@ -29,6 +30,10 @@ let getTopDoctorHome = (limitInput) => {
             raw: true,
             nest: true,
         });
+
+        if (!users) {
+            users = [];
+        }
 
         resolve({
             errCode: 0,

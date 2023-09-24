@@ -7,7 +7,7 @@ let getAllClinic = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server" + error,
+            errMessage: "Error from server " + error,
         });
     }
 };
@@ -19,7 +19,7 @@ let createClinic = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server" + error,
+            errMessage: "Error from server " + error,
         });
     }
 };
@@ -31,7 +31,7 @@ let updateClinic = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server" + error,
+            errMessage: "Error from server " + error,
         });
     }
 };
@@ -43,7 +43,7 @@ let deleteClinic = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server" + error,
+            errMessage: "Error from server " + error,
         });
     }
 };
@@ -55,7 +55,7 @@ let getDetailClinicById = async (req, res) => {
     } catch (error) {
         return res.status(200).json({
             errCode: -1,
-            errMessage: "Error from server" + error,
+            errMessage: "Error from server " + error,
         });
     }
 };

@@ -94,6 +94,7 @@ let getAllUsers = (userId) => {
                     },
                 });
             }
+            users = users.filter((user) => user.lastName);
             resolve(users);
         } catch (error) {
             reject(error);
@@ -210,6 +211,7 @@ let getAllCodeService = (typeInput) => {
                 let allCode = await db.Allcode.findAll({
                     where: { type: typeInput },
                 });
+
                 res.errCode = 0;
                 res.data = allCode;
                 resolve(res);
